@@ -1,0 +1,36 @@
+//Practice the following
+1. Strings
+    Convert Array to String without comma
+    To array, split('')
+    Take out / remove n chars
+    Regex search
+    Search and replace
+    Tolowercase or touppercase
+    Capitallize first letter of a word
+    Remember: charAt(x), concat(a1,a2), indexOf(substr, [start]), 
+    lastIndexOf(substr, [start]), match(regexp), replace(regexp/substr, replacetext)
+    , search(regexp), slice(start, [end]), substr(start, [length]), substring(from, [to])
+    toLowerCase(), toUpperCase(), replace()
+    special chars: 
+        \t – tab
+        \b – backspace/delete
+        \r – carriage return
+        \n – newline
+        \f – form feed
+    good site: https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript
+2. Array manipulations
+    create unique array: using new Set(), Array.from(se.values())
+    get max: Math.max(...array)
+    array to object
+    object to array
+    iterations in array
+    remember that from foreach you cannot come out. From regular loops you can break or return
+    slice, splice, push, pop, sort
+    concat, find, filter, fill, includes, map, reduce
+    Object.keys, Object.values, Object.entries
+    Array spread, Object spread
+    remove duplicates:
+    const arr = [1, 2, 2, 4, 5, 5];
+    [...new Set(arr)]
+    
+    

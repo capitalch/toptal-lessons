@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/dominator.js"
+            "program": "${workspaceFolder}/toptal1.js"
         }
     ]
 }
