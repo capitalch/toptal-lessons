@@ -1,6 +1,3 @@
-let m = new Map();
-m.set(1,4);
-m.set(2,3);
-
-console.log(m.keys);
-
+const len = 5;
+const half = Math.floor(len / 2) + 1;
+console.log(half);
