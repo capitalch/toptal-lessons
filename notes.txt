@@ -32,5 +32,7 @@
     remove duplicates:
     const arr = [1, 2, 2, 4, 5, 5];
     [...new Set(arr)]
+3. https://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/
+4. https://www.codewars.com/
     
     
