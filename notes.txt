@@ -1,3 +1,28 @@
+//Tips
+Map: get, set, has, keys(), values(), math.max(...map)
+array: 
+    arr.sort((a,b)=>a-b); 
+    a.join(''); 
+    a.reverse();
+    a.shift(): returns first element; modifies the array
+    a.unshift('xx'): Adds xx in begining; returns new length; modifies array
+    a.includes('x')
+    a.find(callback): returns 1st element which satifies callback; callback is element, index, array
+    a.findIndex(callback)
+    a.filter(callback): returns new array
+    a.reduce(callback,initialvalue): callback: previous,current, index, array
+    a.slice([begin[, end]]): begin to end, end not included; does not mutate
+    a.keys()
+    a.values()
+
+Remove duplicates: set = new Set(arr); arr1 = Array.from(set.values()); 
+string to array: s.split('');
+array to string: 
+array reverse: 
+string.concat('a'); string s= 'abc'; s.includes('a')
+array shift removes first element; array unshift adds element in begining
+
+
 //Practice the following
 1. Strings
     Convert Array to String without comma
@@ -19,7 +44,7 @@
         \f – form feed
     good site: https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript
 2. Array manipulations
-    create unique array: using new Set(), Array.from(se.values())
+    create unique array: using new Set(), Array.from(set.values())
     get max: Math.max(...array)
     array to object
     object to array
@@ -29,6 +54,7 @@
     concat, find, filter, fill, includes, map, reduce
     Object.keys, Object.values, Object.entries
     Array spread, Object spread
+    array.join()
     remove duplicates:
     const arr = [1, 2, 2, 4, 5, 5];
     [...new Set(arr)]

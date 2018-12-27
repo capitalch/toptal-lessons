@@ -1,13 +1,26 @@
-const a = [17, 28, 30];
-const b = [99, 16, 8];
-let as = 0, bs = 0;
-if (a[0] > b[0]) {
-    as++;
+function sumR(i, arr) {
+    let res = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+        res = res + arr[j];
+    }
+    return res;
 }
-if (a[2] < b[2]) {
-    bs++;
+
+function sumL(i, arr) {
+    let res = 0;
+    for (let j = 0; j < i; j++) {
+        res = res + arr[j];
+    }
+    return res;
 }
-const scores = [];
-scores.push(as)
-scores.push(bs);
-console.log(scores);
+
+const arr = [1, 2, 3, 4, 3, 2, 1];
+const max = arr.length - 1;
+for (let i = 0; i <= max; i++) {
+    const valL = sumL(i, arr);
+    const valR = sumR(i, arr);
+    if (valL === valR) {
+        console.log(i);
+    }
+}
+console.log(-1);
