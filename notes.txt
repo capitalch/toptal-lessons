@@ -1,4 +1,11 @@
+//coding exercises
+Will do: https://www.w3resource.com/javascript-exercises/fundamental/index.php
+
 //Tips
+
+Numbers: Convert string to number: multiply by 1 (*1). This is fastest. also +String does the work. 
+ParseInt(), parseFloat() or Number('123') or Math.floor()
+
 Map: get, set, has, keys(), values(), math.max(...map)
 array: 
     arr.sort((a,b)=>a-b); 
@@ -25,7 +32,7 @@ array shift removes first element; array unshift adds element in begining
 
 //Practice the following
 1. Strings
-    Convert Array to String without comma
+    Convert Array to String without comma: arr.join()
     To array, split('')
     Take out / remove n chars
     Regex search
