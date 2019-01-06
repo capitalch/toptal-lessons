@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/toptal.js"
+            "program": "${workspaceFolder}/excercises/ex1.js"
         }
     ]
 }

@@ -4,7 +4,9 @@ Will do: https://www.w3resource.com/javascript-exercises/fundamental/index.php
 //Tips
 
 Numbers: Convert string to number: multiply by 1 (*1). This is fastest. also +String does the work. 
-ParseInt(), parseFloat() or Number('123') or Math.floor()
+    ParseInt(), parseFloat() or Number('123') or Math.floor()
+    number.toString(radix) changes to a different base. The number must be base 10
+    parseInt(input, the_input_base).toString(the_conversion_base): from any base to any base
 
 Map: get, set, has, keys(), values(), math.max(...map)
 array: 
@@ -22,10 +24,12 @@ array:
     a.keys()
     a.values()
 
+array to objects: {...arr}, Object.assign({},arr)
+
 Remove duplicates: set = new Set(arr); arr1 = Array.from(set.values()); 
-string to array: s.split('');
-array to string: 
-array reverse: 
+string to array: s.split(''), Array.from(string), [...string];
+array to string: array.join(''), array.join('').map(Number).reverse()
+
 string.concat('a'); string s= 'abc'; s.includes('a')
 array shift removes first element; array unshift adds element in begining
 
