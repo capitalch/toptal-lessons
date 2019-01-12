@@ -80,10 +80,40 @@ function solu1(arr) {
     dobj2 = {...dobj1};
     dobj2['a'] = 'abc';
 
-    return ret1;
+    //destructure an object
+    const a1 = {
+        firstName:'Sushant',
+        lastName:'Agrawal',
+        address1:'12 J.L'
+    };
+    // let firstName,lastName;
+    // {firstName,lastName} = a1;
 
+    // const {name,...others} = a1;
+    // const [name1,addresses1] = a1;
+    // console.log(name1,':',addresses1);
+    // console.log(name);
+    // console.log(others)
+
+    var x1 = 0;
+    function foo(){
+        var x1 = 1;
+    }
+    foo();
+    console.log(x1);
+
+    //variable swapping by array destructuring
+    let i=100,j=200;
+    [i,j] = [j,i];
+
+    //computed property names
+    const a = 'my', b='name';
+    const myObj={
+        [a.concat(b)] : 'sushant'
+    };
     
 
+    return ret1;
 
 }
 
