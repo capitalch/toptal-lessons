@@ -80,6 +80,11 @@ function solu1(arr) {
     dobj2 = {...dobj1};
     dobj2['a'] = 'abc';
 
+    //deep clone array
+    const arrr1 = [{a:1,b:1},{a:2,b:2},{a:3,b:3}];
+    const arrr2 = JSON.parse(JSON.stringify(arrr1));
+    arrr2[0]['a']=1000;
+
     //destructure an object
     const a1 = {
         firstName:'Sushant',
@@ -112,6 +117,21 @@ function solu1(arr) {
         [a.concat(b)] : 'sushant'
     };
     
+    //enum
+    const myEnums = Object.freeze({'a-1':1,'b-2':2});
+    const normalObj = {'a-1':1,'b-2':2};
+    
+    // check if property exists
+    const obj1 = {
+        myProp:0
+    }
+
+    const exists = ('myProp' in obj1);
+    if(exists){
+        console.log('property exists');
+    } else{
+        console.log('property does not exist');
+    }
 
     return ret1;
 
