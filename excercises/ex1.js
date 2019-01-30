@@ -77,12 +77,48 @@ function solu1(arr) {
 
     //deep clone an object
     const dobj1 = { a: { b: { c: { d: 1 } } } }
-    dobj2 = {...dobj1};
+    dobj2 = { ...dobj1 };
     dobj2['a'] = 'abc';
+
+    //count carry while adding two +ve numbers
+    const a = 998, b = 1899;
+    let as = a.toString(), bs = b.toString();
+    const len = Math.max(as.length, bs.length);
+    as = as.toString().padStart(len, 0);
+    bs = bs.toString().padStart(len, 0);
+    const aRev = [...as].reverse();
+    const bRev = [...bs].reverse();
+    let carry = 0;
+    for (let i = 0; i < len; i++) {
+        let res = aRev[i] + bRev[i] + carry;
+        if (res > 9) {
+            carry++;
+        }
+    }
+
+    //interchange objects key values
+    const objA = { a: 1, b: 2, c: 3, d: 3 };
+    const objB = {};
+    let val1;
+    for (let x in objA) {
+        val1 = objA[x];
+        objB[val1] = x;
+    }
+    console.log(objB);
+
+    //push object in array and change array element to see effect in original object
+    const arr3=[];
+    obj1 = {a:1,b:2};
+    obj2 = {c:3,d:4};
+    arr3.push(obj1);
+    arr3.push(obj2);
+    arr3[0].a=1000;
+    
+
 
     return ret1;
 
-    
+
 
 
 }
