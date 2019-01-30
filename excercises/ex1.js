@@ -91,6 +91,9 @@ function solu1(arr) {
         lastName:'Agrawal',
         address1:'12 J.L'
     };
+
+    const {firstName, ...rest} = a1;
+    console.log(rest);
     // let firstName,lastName;
     // {firstName,lastName} = a1;
 
