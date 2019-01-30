@@ -80,6 +80,7 @@ function solu1(arr) {
     dobj2 = { ...dobj1 };
     dobj2['a'] = 'abc';
 
+<<<<<<< HEAD
     //count carry while adding two +ve numbers
     const a = 998, b = 1899;
     let as = a.toString(), bs = b.toString();
@@ -113,8 +114,65 @@ function solu1(arr) {
     arr3.push(obj1);
     arr3.push(obj2);
     arr3[0].a=1000;
-    
+=======
+    //deep clone array
+    const arrr1 = [{a:1,b:1},{a:2,b:2},{a:3,b:3}];
+    const arrr2 = JSON.parse(JSON.stringify(arrr1));
+    arrr2[0]['a']=1000;
 
+    //destructure an object
+    const a1 = {
+        firstName:'Sushant',
+        lastName:'Agrawal',
+        address1:'12 J.L'
+    };
+
+    const {firstName, ...rest} = a1;
+    console.log(rest);
+    // let firstName,lastName;
+    // {firstName,lastName} = a1;
+
+    // const {name,...others} = a1;
+    // const [name1,addresses1] = a1;
+    // console.log(name1,':',addresses1);
+    // console.log(name);
+    // console.log(others)
+
+    var x1 = 0;
+    function foo(){
+        var x1 = 1;
+    }
+    foo();
+    console.log(x1);
+
+    //variable swapping by array destructuring
+    let i=100,j=200;
+    [i,j] = [j,i];
+
+    //computed property names
+    const a = 'my', b='name';
+    const myObj={
+        [a.concat(b)] : 'sushant'
+    };
+    
+    //enum
+    const myEnums = Object.freeze({'a-1':1,'b-2':2});
+    const normalObj = {'a-1':1,'b-2':2};
+>>>>>>> 9ab58c0b2d7d64a8e3b585276cb35ef65515da3f
+    
+    // check if property exists
+    const obj1 = {
+        myProp:0
+    }
+
+    const exists = ('myProp' in obj1);
+    if(exists){
+        console.log('property exists');
+    } else{
+        console.log('property does not exist');
+    }
+
+    return ret1;
 
     return ret1;
 

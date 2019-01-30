@@ -21,6 +21,7 @@ array:
     a.filter(callback): returns new array
     a.reduce(callback,initialvalue): callback: previous,current, index, array
     a.slice([begin[, end]]): begin to end, end not included; does not mutate
+    a.splice(index,howmany, item1,item2...itemx). howmany removes and item1... itex adds. mutates the array
     a.keys()
     a.values()
 
@@ -33,6 +34,11 @@ array to string: array.join(''), array.join('').map(Number).reverse()
 string.concat('a'); string s= 'abc'; s.includes('a')
 array shift removes first element; array unshift adds element in begining
 
+arr2 = [...arr1] or obj2 = [...obj1] does not do deep cloning. They do shallow cloning.
+That means only top level items are clone but nested items are actually references.
+So when you modify nested items in cloned element then original element changes.
+Best deep cloning is
+obj2 = JSON.parse(JSON.stringify(obj1));
 
 //Practice the following
 1. Strings
