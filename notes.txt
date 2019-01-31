@@ -7,6 +7,13 @@ Numbers: Convert string to number: multiply by 1 (*1). This is fastest. also +St
     ParseInt(), parseFloat() or Number('123') or Math.floor()
     number.toString(radix) changes to a different base. The number must be base 10
     parseInt(input, the_input_base).toString(the_conversion_base): from any base to any base
+    Math.floor(): smallest number less than or equal to. 12.5 = 12, 12.9=12, -12.9=-13
+    Math.abs()
+    Math.ceil(): largest number greater than or equal to. 12.5 = 13, 12.9 = 13, 12.01 = 13, -12.09 = -12 
+    Math.round()
+    Math.trunc()
+    get quotient: Math.floor(a/b)
+    get remainder: a % b
 
 Map: get, set, has, keys(), values(), math.max(...map)
 array: 
@@ -42,6 +49,7 @@ obj2 = JSON.parse(JSON.stringify(obj1));
 
 //Practice the following
 1. Strings
+	reverse a string const str1 = 'abcdefg'; str2 = [...str1].reverse().join('');
     Convert Array to String without comma: arr.join()
     To array, split('')
     Take out / remove n chars
@@ -67,7 +75,9 @@ obj2 = JSON.parse(JSON.stringify(obj1));
     object to array
     iterations in array
     remember that from foreach you cannot come out. From regular loops you can break or return
-    slice, splice, push, pop, sort
+    slice : No mutate. Does not include the last number. arr.slice([begin[, end]]). begin can be negative but end needs to be positive integer. 
+    splice : Mutates. array.splice(start[, deleteCount[, item1[, item2[, ...]]]]). for only addition the deletecount should be zero. Returns the removed items. Inserts items at start.
+    push, pop, sort
     concat, find, filter, fill, includes, map, reduce
     Object.keys, Object.values, Object.entries
     Array spread, Object spread
