@@ -1,4 +1,6 @@
 // 'use strict'
+
+
 function solu1(arr) {
     //convert array to object
     const ret = { ...arr };

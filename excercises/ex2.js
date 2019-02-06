@@ -1,4 +1,69 @@
 "type strict";
+function sol5() {
+    let a = 19876;
+    let b = 7656547;
+    const len = Math.max(String(a).length, String(b).length);
+    let carry = 0;
+    let prevCarry = 0;
+    for (let i = 0; i < len; i++) {
+        let r1 = a % 10;
+        let r2 = b % 10;
+        if ((r1 + r2 + prevCarry) > 9) {
+            prevCarry = 1;
+            carry++;
+        }
+        else {
+            prevCarry = 0;
+        }
+        a = Math.floor(a / 10);
+        b = Math.floor(b / 10);
+    }
+    return carry;
+}
+sol5();
+function sol4() {
+    //capitalize each first letter of word in a string
+    let s = 'he was very thin';
+    const arrS = s.split(' ');
+    const arrT = arrS.map(x => {
+        let arrX = [...x];
+        arrX[0] = arrX[0].toUpperCase();
+        x = arrX.join('');
+        return x;
+    });
+    const s1 = arrT.join(' ');
+    return s1;
+}
+sol4();
+function noOfCarry() {
+    const a = 19876;
+    const b = 7656547;
+    const arrA = [...String(a)].reverse();
+    const arrB = [...String(b)].reverse();
+    const len = Math.max(arrA.length, arrB.length);
+    let prevcarry = 0;
+    let carry = 0;
+    for (let i = 0; i < len; i++) {
+        let aa = +arrA[i] || 0;
+        let bb = +arrB[i] || 0;
+        if ((aa + bb + prevcarry) > 9) {
+            carry++;
+            prevcarry = 1;
+        }
+        else {
+            prevcarry = 0;
+        }
+    }
+    return carry;
+}
+noOfCarry();
+function sol3() {
+    //string reverse
+    const s = 'I am a boy';
+    const s1 = [...s].reverse().join('');
+    return s1;
+}
+sol3();
 function sol2() {
     //function to move in array from one position to other
     const arr1 = [1, 2, 3, 4, 5];
