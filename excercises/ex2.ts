@@ -1,4 +1,112 @@
 "type strict"
+function sol12() {
+    //armstrong number
+    const n = 153;
+    const an = [...String(n)];
+    const len = an.length;
+    let tot = 0;
+    an.forEach(x => {
+        tot = tot + Math.pow(+x, len);
+    });
+    console.log(tot === n);
+}
+sol12();
+function sol11() {
+    //check credit card number
+    const credit = '4539 1488 0343 6467';
+    const arrCredit = [...credit].filter(x => x != ' ');
+    const revCredit = arrCredit.reverse();
+    const revCreditProduct = revCredit.map((x, i) => {
+        let y = Number(x);
+        if (((i + 1) % 2) === 0) {
+            y = y * 2;
+            if (y > 9) {
+                y = y - 9;
+            }
+        }
+        return y;
+    });
+    const revCreditSum = revCreditProduct.reduce((prev, num) => { return (prev + num) }, 0);
+    if ((revCreditSum % 10) === 0) {
+        console.log('Correct');
+    } else {
+        console.log('wrong');
+    }
+
+}
+sol11();
+
+function sol10() {
+    const str = 'webmaster';
+    const out = [...str].sort().join('');
+    return out;
+
+}
+sol10();
+
+function sol9() {
+    //Armstrong number
+    const out: Number[] = [];
+    let n: Number;
+    let sumCube = 0;
+    let strNum = 0;
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 10; j++) {
+            for (let k = 0; k < 10; k++) {
+                let str = "".concat(String(i), String(j), String(k));
+                if ((i != 0)) {
+                    let strArr = [...str];
+                    strNum = Number(str);
+                    sumCube = 0;
+                    while (strArr.length > 0) {
+                        let dgt = Number(strArr.pop());
+                        sumCube = sumCube + (dgt * dgt * dgt)
+                    }
+                    if (sumCube === strNum) {
+                        out.push(sumCube)
+                    }
+                }
+            }
+        }
+    }
+    return out;
+}
+sol9();
+
+function sol8() {
+    //swap key values of object
+    const obj = { name: 'Sushant', Address: "12 J.L", phone: '222899987', gender: 'Male' }
+    const out: any = {};
+    for (let prop in obj) {
+        out[obj[prop]] = prop;
+    }
+    return out;
+}
+sol8();
+function sol7() {
+    // convert object to array of name value pairs
+    const obj = { name: 'Sushant', Address: "12 J.L", phone: '222899987', gender: 'Male' }
+    const out: any[] = [];
+    for (let prop in obj) {
+        out.push({ [prop]: obj[prop] });
+    }
+    return out;
+}
+sol7();
+
+function sol6() {
+    // all possible strings from a given string
+    const str = 'dog';
+    const out: string[] = [];
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j <= str.length; j++) {
+            let temp = str.slice(i, j);
+            out.push(temp);
+        }
+    }
+    return out;
+}
+sol6();
 
 function sol5() {
     let a = 19876;

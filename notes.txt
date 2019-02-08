@@ -1,4 +1,15 @@
+//countdown
+1. Array in details
+2. String in details
+3. Sorting algorithms
+4. Conversion string, Array, Ingeger and taking out values at nth position
+5. Number system changes: cobvert to decimal, binary
+6. Binary arithmetic
+7. Maps, sets
+8. Object to array and vice vesa Conversion
+9. Object swap properties.
 //coding exercises
+
 Will do: https://www.w3resource.com/javascript-exercises/fundamental/index.php
 
 //Tips
