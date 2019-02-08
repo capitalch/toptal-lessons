@@ -1,4 +1,6 @@
 "type strict";
+const arr1 = [1, 2, 3, 4, 5];
+arr1.copyWithin(0, 3, 4);
 function sol12() {
     //armstrong number
     const n = 153;
